@@ -1,5 +1,0 @@
-inherited Form1_GGlass: TForm1_GGlass
-  ClientHeight = 215
-  ClientWidth = 427
-  DesignerMasterStyle = 0
-end
