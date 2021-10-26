@@ -1,1 +1,1 @@
-# delphi_exercises
+# Delphi exercises

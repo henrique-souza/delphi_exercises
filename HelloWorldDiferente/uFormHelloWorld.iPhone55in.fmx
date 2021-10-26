@@ -1,0 +1,5 @@
+inherited FormHelloWorld_iPhone55in: TFormHelloWorld_iPhone55in
+  ClientHeight = 716
+  ClientWidth = 414
+  DesignerMasterStyle = 3
+end
