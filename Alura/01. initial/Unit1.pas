@@ -123,6 +123,7 @@ begin
   // 'ValorDoNome'.
 
   // o código ' + #13 + ' equivale a quebra de linha.
+  // O comando abaixo faz com que uma mensagem (Caption) seja setado ao Label.
   Mensagem.Caption := 'Valor convertido, ' + ValorDoNome + #13 + #13 +
     'Você comprou ' + DOLAR.Text + ' Dolar(es). Volte sempre.';
 end;
