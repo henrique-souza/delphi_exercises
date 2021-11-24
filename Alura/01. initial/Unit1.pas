@@ -13,10 +13,10 @@ type
     Button1: TButton;
     procedure Button1Click(Sender: TObject);
   private
-    // aqui ficam as variáveis que só iremos usar dentro deste form
+    // aqui ficam os métodos, objetos, atributos e variáveis que só iremos usar dentro deste form
     { Private declarations }
   public
-    // aqui ficariam as variaveis que podemos usar em diversos forms
+    // aqui ficariam os métodos, objetos, atributos e variaveis que podemos usar em diversos forms
     // troca de dados entre formularios
     { Public declarations }
   end;
