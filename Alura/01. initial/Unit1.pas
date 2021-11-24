@@ -14,7 +14,11 @@ type
     REAL: TEdit;
     Label1: TLabel;
     Label2: TLabel;
+    Label3: TLabel;
+    Comprar: TButton;
+    Mensagem: TLabel;
     procedure Button1Click(Sender: TObject);
+    procedure ComprarClick(Sender: TObject);
   private
     // aqui ficam os métodos, objetos, atributos e variáveis que
     // só iremos usar dentro deste form
@@ -41,6 +45,8 @@ var
   // Double
   // Currency, entre outras... (Consultar livro depois)
   ValorReal: REAL;
+
+  ValorDoNome: string;
 
 implementation
 
@@ -76,6 +82,7 @@ begin
   //
 
   if DOLAR.Text = '' then
+
   // caso o bloco 'if' tenha um bloco 'begin...end' contendo um 'end;', por
   // padrão, o Delphi acusará que o if não tem um 'else', por exemplo. Isso fará
   // com que nosso 'else' não seja executado/dê erro de sintaxe. Para resolver
@@ -89,6 +96,10 @@ begin
   // armazenada em 'ValorReal'.
   else
   begin
+    // quando o usuario clicar no botao 'Converter', vamos habilitar o botão
+    // 'Compra'.
+    Comprar.Enabled := True;
+
     // o método 'StrToFloat()' está pegando o conteúdo (em texto) da caixa
     // DOLAR e convertendo para um número Flutuante, para que possa ser feito
     // o cálculo (também por um número flutuante) da conversão da moeda.
@@ -96,6 +107,24 @@ begin
     REAL.Text := FloatToStr(ValorReal);
   end;
 
+end;
+
+procedure TForm1.ComprarClick(Sender: TObject);
+begin
+  // o método 'InputBox()' tem 3 parametros para serem
+  // preenchidos, respectivamente:
+  // 1. Caption
+  // 2. Prompt
+  // 3. Default
+  ValorDoNome := InputBox('Nome', 'Digite seu nome, por favor', '');
+
+  // quando o usuario clicar em 'Compra', um botão invisivel adicionado
+  // chamado 'Mensagem' irá imprimir o que foi armazenado na varivel
+  // 'ValorDoNome'.
+
+  // o código ' + #13 + ' equivale a quebra de linha.
+  Mensagem.Caption := 'Valor convertido, ' + ValorDoNome + #13 + #13 + 'Você comprou '
+    + DOLAR.Text + ' Dolar(es). Volte sempre.';
 end;
 
 end.

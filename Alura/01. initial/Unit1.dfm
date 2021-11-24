@@ -15,7 +15,7 @@ object Form1: TForm1
   TextHeight = 13
   object Label1: TLabel
     Left = 32
-    Top = 22
+    Top = 30
     Width = 55
     Height = 18
     Caption = 'DOLAR'
@@ -28,7 +28,7 @@ object Form1: TForm1
   end
   object Label2: TLabel
     Left = 264
-    Top = 22
+    Top = 30
     Width = 42
     Height = 18
     Caption = 'REAL'
@@ -39,9 +39,34 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
   end
+  object Label3: TLabel
+    Left = 224
+    Top = 57
+    Width = 22
+    Height = 18
+    Caption = '>>'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Mensagem: TLabel
+    Left = 32
+    Top = 182
+    Width = 4
+    Height = 18
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
   object DOLAR: TEdit
     Left = 32
-    Top = 46
+    Top = 54
     Width = 169
     Height = 27
     Font.Charset = ANSI_CHARSET
@@ -53,11 +78,11 @@ object Form1: TForm1
     TabOrder = 0
   end
   object Button1: TButton
-    Left = 550
-    Top = 372
+    Left = 169
+    Top = 108
     Width = 137
     Height = 55
-    Caption = 'Button1'
+    Caption = 'Converter'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -69,7 +94,7 @@ object Form1: TForm1
   end
   object REAL: TEdit
     Left = 264
-    Top = 46
+    Top = 54
     Width = 169
     Height = 27
     Font.Charset = ANSI_CHARSET
@@ -79,5 +104,21 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 2
+  end
+  object Comprar: TButton
+    Left = 440
+    Top = 108
+    Width = 153
+    Height = 55
+    Caption = 'Comprar'
+    Enabled = False
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    OnClick = ComprarClick
   end
 end
