@@ -68,7 +68,7 @@ object Form1: TForm1
     Left = 32
     Top = 54
     Width = 169
-    Height = 27
+    Height = 26
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -96,7 +96,7 @@ object Form1: TForm1
     Left = 264
     Top = 54
     Width = 169
-    Height = 27
+    Height = 26
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
