@@ -1,7 +1,7 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = 'Conversor de Dolar'
   ClientHeight = 435
   ClientWidth = 695
   Color = clBtnFace
@@ -13,21 +13,71 @@ object Form1: TForm1
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Edit1: TEdit
-    Left = 40
+  object Label1: TLabel
+    Left = 32
+    Top = 22
+    Width = 55
+    Height = 18
+    Caption = 'DOLAR'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 264
+    Top = 22
+    Width = 42
+    Height = 18
+    Caption = 'REAL'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object DOLAR: TEdit
+    Left = 32
     Top = 46
-    Width = 121
-    Height = 21
+    Width = 169
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
-    Text = 'CAIXA'
   end
   object Button1: TButton
-    Left = 272
-    Top = 42
-    Width = 75
-    Height = 25
+    Left = 550
+    Top = 372
+    Width = 137
+    Height = 55
     Caption = 'Button1'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 1
     OnClick = Button1Click
+  end
+  object REAL: TEdit
+    Left = 264
+    Top = 46
+    Width = 169
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
   end
 end
