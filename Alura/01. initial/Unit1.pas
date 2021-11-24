@@ -123,8 +123,8 @@ begin
   // 'ValorDoNome'.
 
   // o código ' + #13 + ' equivale a quebra de linha.
-  Mensagem.Caption := 'Valor convertido, ' + ValorDoNome + #13 + #13 + 'Você comprou '
-    + DOLAR.Text + ' Dolar(es). Volte sempre.';
+  Mensagem.Caption := 'Valor convertido, ' + ValorDoNome + #13 + #13 +
+    'Você comprou ' + DOLAR.Text + ' Dolar(es). Volte sempre.';
 end;
 
 end.
