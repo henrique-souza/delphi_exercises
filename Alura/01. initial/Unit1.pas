@@ -11,6 +11,7 @@ type
   TForm1 = class(TForm)
     Edit1: TEdit;
     Button1: TButton;
+    procedure Button1Click(Sender: TObject);
   private
     // aqui ficam as variáveis que só iremos usar dentro deste form
     { Private declarations }
@@ -23,9 +24,18 @@ type
 var
   Form1: TForm1;
   // a declaração de variáveis no Delphi é fortemente tipada
+  // dar uma lida melhor sobre variaveis no livro
+  var1: string;
 
 implementation
 
 {$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  var1 := 'mensagem';
+  Edit1.text := var1;
+
+end;
 
 end.

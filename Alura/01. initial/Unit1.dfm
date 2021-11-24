@@ -19,7 +19,7 @@ object Form1: TForm1
     Width = 121
     Height = 21
     TabOrder = 0
-    Text = 'Edit1'
+    Text = 'CAIXA'
   end
   object Button1: TButton
     Left = 272
@@ -28,5 +28,6 @@ object Form1: TForm1
     Height = 25
     Caption = 'Button1'
     TabOrder = 1
+    OnClick = Button1Click
   end
 end
