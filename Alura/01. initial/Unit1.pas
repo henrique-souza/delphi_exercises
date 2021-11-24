@@ -13,11 +13,13 @@ type
     Button1: TButton;
     procedure Button1Click(Sender: TObject);
   private
-    // aqui ficam os métodos, objetos, atributos e variáveis que só iremos usar dentro deste form
+    // aqui ficam os métodos, objetos, atributos e variáveis que
+    // só iremos usar dentro deste form
     { Private declarations }
   public
-    // aqui ficariam os métodos, objetos, atributos e variaveis que podemos usar em diversos forms
-    // troca de dados entre formularios
+    // aqui ficariam os métodos, objetos, atributos e variaveis que
+    // podemos usar em diversos forms.
+    // Troca de dados entre formularios
     { Public declarations }
   end;
 
@@ -34,6 +36,8 @@ implementation
 procedure TForm1.Button1Click(Sender: TObject);
 begin
   var1 := 'mensagem';
+  // ".text" quer dizer que estamos manipulando a propriedade "Text",
+  // na caixa de propriedades do botão, ao lado esquerdo da IDE.
   Edit1.text := var1;
 
 end;
