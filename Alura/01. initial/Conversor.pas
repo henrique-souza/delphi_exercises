@@ -122,10 +122,19 @@ begin
   // chamado 'Mensagem' irá imprimir o que foi armazenado na varivel
   // 'ValorDoNome'.
 
-  // o código ' + #13 + ' equivale a quebra de linha.
-  // O comando abaixo faz com que uma mensagem (Caption) seja setado ao Label.
-  Mensagem.Caption := 'Valor convertido, ' + ValorDoNome + #13 + #13 +
-    'Você comprou ' + DOLAR.Text + ' Dolar(es). Volte sempre.';
+  // neste laço if, os simbolos "<>" significam 'diferente de...'
+  // estamos usando () nos parâmetros para que o Delphi faça uma coisa de cada
+  // vez. Sem os parenteses, dará erro de sintaxe.
+  if (ValorDoNome <> '') and (DOLAR.Text <> '0') then
+    // o código ' + #13 + ' equivale a quebra de linha.
+    // O comando abaixo faz com que uma mensagem (Caption) seja setado ao Label.
+    Mensagem.Caption := 'Valor convertido, ' + ValorDoNome + '.'#13 + #13 +
+      'Você comprou ' + DOLAR.Text + ' Dolar(es). Volte sempre.'
+  else
+  begin
+    ShowMessage('Por favor, digite um nome ou um valor acima de 0.');
+  end;
+
 end;
 
 end.
