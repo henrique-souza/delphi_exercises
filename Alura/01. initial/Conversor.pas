@@ -20,11 +20,13 @@ type
     procedure Button1Click(Sender: TObject);
     procedure ComprarClick(Sender: TObject);
   private
+
     // aqui ficam os métodos, objetos, atributos e variáveis que
     // só iremos usar dentro deste form
 
     { Private declarations }
   public
+
     // aqui ficariam os métodos, objetos, atributos e variaveis que
     // podemos usar em diversos forms.
     // Troca de dados entre formularios
@@ -44,6 +46,7 @@ var
   // temos outros tipos de variaveis, como:
   // Double
   // Currency, entre outras... (Consultar livro depois)
+
   ValorReal: REAL;
 
   ValorDoNome: string;
@@ -54,6 +57,7 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
+
   // var1 := 'mensagem';
 
   // ".text" quer dizer que estamos manipulando a propriedade "Text",
@@ -96,6 +100,7 @@ begin
   // armazenada em 'ValorReal'.
   else
   begin
+
     // quando o usuario clicar no botao 'Converter', vamos habilitar o botão
     // 'Compra'.
     Comprar.Enabled := True;
@@ -111,6 +116,7 @@ end;
 
 procedure TForm1.ComprarClick(Sender: TObject);
 begin
+
   // o método 'InputBox()' tem 3 parametros para serem
   // preenchidos, respectivamente:
   // 1. Caption
@@ -126,6 +132,7 @@ begin
   // estamos usando () nos parâmetros para que o Delphi faça uma coisa de cada
   // vez. Sem os parenteses, dará erro de sintaxe.
   if (ValorDoNome <> '') and (DOLAR.Text <> '0') then
+
     // o código ' + #13 + ' equivale a quebra de linha.
     // O comando abaixo faz com que uma mensagem (Caption) seja setado ao Label.
     Mensagem.Caption := 'Valor convertido, ' + ValorDoNome + '.'#13 + #13 +
