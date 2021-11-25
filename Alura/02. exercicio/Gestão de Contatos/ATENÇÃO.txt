@@ -1,0 +1,10 @@
+Fiz o projeto em minha nuvem pela primeira vez, porém, o erro:
+
+[FireDAC][DatS]-32. Variable lenght column [CATALOG_NAME] overflow. 
+Value length - [132], column maximum length - [128] 
+
+Foi anunciado no meio do processo. Basicamente, este erro se deu por que
+o caminho que o Delphi estava fazendo até o banco de dados era muito grande.
+
+Eu salvei o projeto em "meus documentos", na pasta da Embarcadero, em 'Projects' 
+e o erro foi sanado.
