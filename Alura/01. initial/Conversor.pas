@@ -10,14 +10,14 @@ uses
 type
   TForm1 = class(TForm)
     DOLAR: TEdit;
-    Button1: TButton;
+    Converter: TButton;
     REAL: TEdit;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Comprar: TButton;
     Mensagem: TLabel;
-    procedure Button1Click(Sender: TObject);
+    procedure ConverterClick(Sender: TObject);
     procedure ComprarClick(Sender: TObject);
   private
 
@@ -51,11 +51,13 @@ var
 
   ValorDoNome: string;
 
+  ClickBotao: Integer;
+
 implementation
 
 {$R *.dfm}
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TForm1.ConverterClick(Sender: TObject);
 begin
 
   // var1 := 'mensagem';
@@ -122,7 +124,8 @@ begin
   // 1. Caption
   // 2. Prompt
   // 3. Default
-  ValorDoNome := InputBox('Nome', 'Digite seu nome, por favor', '');
+  // ValorDoNome := InputBox('Nome', 'Digite seu nome, por favor', '');
+  ClickBotao := 0;
 
   // quando o usuario clicar em 'Compra', um botão invisivel adicionado
   // chamado 'Mensagem' irá imprimir o que foi armazenado na varivel
@@ -131,17 +134,38 @@ begin
   // neste laço if, os simbolos "<>" significam 'diferente de...'
   // estamos usando () nos parâmetros para que o Delphi faça uma coisa de cada
   // vez. Sem os parenteses, dará erro de sintaxe.
-  if (ValorDoNome <> '') and (DOLAR.Text <> '0') then
+  // if (ValorDoNome <> '') and (DOLAR.Text <> '0') then
+  //
+  // // o código ' + #13 + ' equivale a quebra de linha.
+  // // O comando abaixo faz com que uma mensagem (Caption) seja setado ao Label.
+  // Mensagem.Caption := 'Valor convertido, ' + ValorDoNome + '.'#13 + #13 +
+  // 'Você comprou ' + DOLAR.Text + ' Dolar(es). Volte sempre.'
+  // else
+  // begin
+  // ShowMessage('Por favor, digite um nome ou um valor acima de 0.');
+  // end;
 
-    // o código ' + #13 + ' equivale a quebra de linha.
-    // O comando abaixo faz com que uma mensagem (Caption) seja setado ao Label.
-    Mensagem.Caption := 'Valor convertido, ' + ValorDoNome + '.'#13 + #13 +
-      'Você comprou ' + DOLAR.Text + ' Dolar(es). Volte sempre.'
+  if (DOLAR.Text = '0') then
+  begin
+    ClickBotao := 1;
+    ShowMessage('Por favor, informe o dolar');
+  end
+
   else
   begin
-    ShowMessage('Por favor, digite um nome ou um valor acima de 0.');
+    ValorDoNome := InputBox('Nome', 'Digite seu nome, por favor', '');
+
+    if (ValorDoNome = '') then
+    begin
+      ClickBotao := 1;
+      ShowMessage('Por favor, informe o seu nome');
+    end;
+
   end;
 
+  if ClickBotao = 0 then
+    Mensagem.Caption := 'Valor convertido, ' + ValorDoNome + '.'#13 + #13 +
+      'Você comprou ' + DOLAR.Text + ' Dolar(es). Volte sempre.'
 end;
 
 end.

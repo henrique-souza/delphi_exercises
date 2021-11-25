@@ -77,7 +77,7 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 0
   end
-  object Button1: TButton
+  object Converter: TButton
     Left = 169
     Top = 108
     Width = 137
@@ -90,7 +90,7 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
-    OnClick = Button1Click
+    OnClick = ConverterClick
   end
   object REAL: TEdit
     Left = 264
