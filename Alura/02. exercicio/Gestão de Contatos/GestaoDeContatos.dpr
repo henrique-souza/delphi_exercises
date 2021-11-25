@@ -2,7 +2,7 @@ program GestaoDeContatos;
 
 uses
   Vcl.Forms,
-  GestaoDeContatos in 'GestaoDeContatos.pas' {Contatos};
+  Unit_Contatos in 'Unit_Contatos.pas' {Contatos};
 
 {$R *.res}
 

@@ -46,6 +46,7 @@
 *.a
 *.o
 *.ocx
+*.accdb
 
 # ignorando os executaveis das multi-plataformas, PC e Mobile
 *.fmx
