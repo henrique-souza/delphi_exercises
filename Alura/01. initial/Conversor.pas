@@ -110,7 +110,7 @@ begin
     // o método 'StrToFloat()' está pegando o conteúdo (em texto) da caixa
     // DOLAR e convertendo para um número Flutuante, para que possa ser feito
     // o cálculo (também por um número flutuante) da conversão da moeda.
-    ValorReal := StrToFloat(DOLAR.Text) * 3.9;
+    ValorReal := StrToFloat(DOLAR.Text) * 5.28;
     REAL.Text := FloatToStr(ValorReal);
   end;
 
