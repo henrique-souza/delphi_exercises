@@ -1,16 +1,16 @@
 object FORM_CONTATOS: TFORM_CONTATOS
   Left = 0
   Top = 0
+  Align = alClient
   Caption = 'GESTAO DE CONTATOS'
-  ClientHeight = 252
-  ClientWidth = 747
+  ClientHeight = 347
+  ClientWidth = 929
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
   object Edit1: TEdit
@@ -48,33 +48,32 @@ object FORM_CONTATOS: TFORM_CONTATOS
   object FDConnection1: TFDConnection
     Params.Strings = (
       
-        'Database=C:\Users\hss_h\Documents\Embarcadero\Studio\Projects\GE' +
-        'STAO DE CONTATOS\Win32\Debug\assets\contatos.mdb'
+        'Database=C:\Users\hs.santos\Documents\Embarcadero\Studio\Project' +
+        's\Alura\02. exercicio\Gest'#227'o de Contatos\Win32\Debug\assets\cont' +
+        'atos.mdb'
       'DriverID=MSAcc')
-    Connected = True
     LoginPrompt = False
-    Left = 464
-    Top = 8
+    Left = 368
+    Top = 70
   end
   object BindSourcecontatos: TBindSourceDB
     DataSet = FDTablecontatos
     ScopeMappings = <>
-    Left = 608
-    Top = 88
+    Left = 463
+    Top = 220
   end
   object FDTablecontatos: TFDTable
-    Active = True
     IndexFieldNames = 'id'
     Connection = FDConnection1
     TableName = 'contatos'
-    Left = 608
-    Top = 24
+    Left = 252
+    Top = 77
   end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 468
-    Top = 93
+    Left = 250
+    Top = 133
     object LinkControlToField1: TLinkControlToField
       Category = 'Quick Bindings'
       DataSource = BindSourcecontatos
