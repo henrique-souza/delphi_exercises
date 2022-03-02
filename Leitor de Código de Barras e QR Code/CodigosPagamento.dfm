@@ -1,21 +1,23 @@
-object Form1: TForm1
+object frmLeitorCodigosBarraCodigoQR: TfrmLeitorCodigosBarraCodigoQR
   Left = 0
   Top = 0
+  AutoSize = True
   Caption = 'Leitor de C'#243'digos de Barra e C'#243'digo QR'
-  ClientHeight = 399
-  ClientWidth = 749
-  Color = clBtnFace
+  ClientHeight = 361
+  ClientWidth = 673
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
+  Visible = True
+  WindowState = wsMaximized
   PixelsPerInch = 96
   TextHeight = 13
-  object CodigosPagamento: TGroupBox
-    Left = 38
-    Top = 19
+  object grpCodigosPagamento: TGroupBox
+    Left = 0
+    Top = 0
     Width = 673
     Height = 361
     Caption = 'Codigos de Pagamento'
@@ -41,6 +43,19 @@ object Form1: TForm1
       Height = 13
       Caption = 'QR Code'
     end
+    object grpLerImagemCodigoBarrasQR: TGroupBox
+      Left = 320
+      Top = 17
+      Width = 185
+      Height = 105
+      Caption = 'Deseja fazer upload de Imagem?'
+      Color = clBtnFace
+      Ctl3D = True
+      ParentBackground = False
+      ParentColor = False
+      ParentCtl3D = False
+      TabOrder = 4
+    end
     object edtCodigoDeBarras: TEdit
       Left = 24
       Top = 64
@@ -62,9 +77,14 @@ object Form1: TForm1
       Height = 21
       TabOrder = 2
     end
-  end
-  object dlgOpenPic1: TOpenPictureDialog
-    Left = 366
-    Top = 83
+    object btnSelecionarImagem: TButton
+      Left = 352
+      Top = 54
+      Width = 129
+      Height = 41
+      Caption = 'Selecionar Imagem'
+      TabOrder = 3
+      OnClick = btnSelecionarImagemClick
+    end
   end
 end
