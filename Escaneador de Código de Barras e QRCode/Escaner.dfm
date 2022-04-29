@@ -14,21 +14,48 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object memoCodigoLido: TMemo
-    Left = 8
-    Top = 40
+    Tag = 1
+    Left = 0
+    Top = 0
     Width = 185
-    Height = 89
+    Height = 242
+    Align = alLeft
     Lines.Strings = (
       'mmo1')
     TabOrder = 0
+    ExplicitLeft = 8
+    ExplicitTop = 40
+    ExplicitHeight = 89
   end
-  object btnLerCodigoBarrasQRCode: TButton
-    Left = 208
-    Top = 38
-    Width = 185
+  object btnLerCodigoBarras: TButton
+    Left = 191
+    Top = 8
+    Width = 145
     Height = 25
-    Caption = 'Ler C'#243'digo de Barras/QRCode'
+    Caption = 'Ler C'#243'digo de Barras'
     TabOrder = 1
-    OnClick = btnLerCodigoBarrasQRCodeClick
+    OnClick = btnLerCodigoBarrasClick
+  end
+  object mmoLeitorQRCode: TMemo
+    Left = 342
+    Top = 0
+    Width = 185
+    Height = 242
+    Align = alRight
+    Lines.Strings = (
+      'mmoLeitorQRCode')
+    TabOrder = 2
+    ExplicitLeft = 392
+    ExplicitTop = 56
+    ExplicitHeight = 89
+  end
+  object btnLerQRCode: TButton
+    Left = 191
+    Top = 39
+    Width = 145
+    Height = 25
+    Caption = 'Ler QR Code'
+    TabOrder = 3
+    OnClick = btnLerQRCodeClick
   end
 end

@@ -117,18 +117,13 @@ end;
 
 procedure TfrmCapture.FormShow(Sender: TObject);
 begin
-  try
-    FCapturing := False;
-    Self.Height := Screen.Height;
-    Self.Width := Screen.Width;
-    Self.ClientHeight := Screen.Height;
-    Self.ClientWidth := Screen.Width;
-    Self.Left := 0;
-    Self.Top := 0;
-  except
-    on Exception do
-      MessageDlg('Tentando tratar o EOutOfResources', mtInformation, [mbOK], 0);
-  end;
+  FCapturing := False;
+  Self.Height := Screen.Height;
+  Self.Width := Screen.Width;
+  Self.ClientHeight := Screen.Height;
+  Self.ClientWidth := Screen.Width;
+  Self.Left := 0;
+  Self.Top := 0;
 end;
 
 function TfrmCapture.WindowCapture(const aLeft, aTop, aRight,
