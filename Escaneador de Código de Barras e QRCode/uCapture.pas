@@ -110,6 +110,7 @@ end;
 procedure TfrmCapture.FormMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
+// Adicionar tratamento para o EOutOfResources aqui, assim que possível
   Self.Visible := False;
   FPrint := WindowCapture(FX, FY, X, Y);
   Close;
