@@ -11,6 +11,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object uploadImagem: TImage
@@ -31,8 +32,6 @@ object Form1: TForm1
     Lines.Strings = (
       'mmoCodigoLido')
     TabOrder = 0
-    ExplicitLeft = 342
-    ExplicitHeight = 89
   end
   object pnlBotaoEnviarCodigo: TPanel
     Left = 0
@@ -43,8 +42,6 @@ object Form1: TForm1
     ParentShowHint = False
     ShowHint = False
     TabOrder = 1
-    ExplicitTop = 200
-    ExplicitWidth = 527
     object btnEnviarCodigoLido: TButton
       AlignWithMargins = True
       Left = 24

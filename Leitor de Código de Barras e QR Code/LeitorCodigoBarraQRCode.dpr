@@ -12,7 +12,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  TStyleManager.TrySetStyle('Windows10 Dark');
+  TStyleManager.TrySetStyle('Windows10');
   Application.CreateForm(TfrmLeitorCodigosBarraCodigoQR, frmLeitorCodigosBarraCodigoQR);
   Application.CreateForm(TForm1, Form1);
   Application.Run;

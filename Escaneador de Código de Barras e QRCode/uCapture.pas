@@ -78,7 +78,7 @@ begin
   FCaptureArea.ParentBackground := False;
   FCaptureArea.ParentColor := False;
   FCaptureArea.ParentBiDiMode := False;
-  FCaptureArea.Color := clRed;
+  FCaptureArea.Color := clWindow;
   FCaptureArea.Brush.Style := TBrushStyle.bsClear;
   FCaptureArea.SetParentComponent(Self);
 end;
@@ -110,7 +110,6 @@ end;
 procedure TfrmCapture.FormMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
-// Um tratamento de exceção deve existir aqui no FormMouseUp para tratar o EOutOfResources ao realizar captura impossível
   Self.Visible := False;
   FPrint := WindowCapture(FX, FY, X, Y);
   Close;

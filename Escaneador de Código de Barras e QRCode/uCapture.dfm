@@ -11,7 +11,7 @@ object frmCapture: TfrmCapture
   BorderStyle = bsNone
   ClientHeight = 1920
   ClientWidth = 1080
-  Color = clBtnFace
+  Color = clDefault
   TransparentColor = True
   TransparentColorValue = clHighlightText
   DefaultMonitor = dmDesktop
@@ -71,6 +71,6 @@ object frmCapture: TfrmCapture
     Layout = tlCenter
     OnMouseDown = FormMouseDown
     OnMouseMove = FormMouseMove
-    OnMouseUp = FormMouseDown
+    OnMouseUp = FormMouseUp
   end
 end

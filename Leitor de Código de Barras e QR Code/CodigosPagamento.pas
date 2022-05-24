@@ -44,9 +44,10 @@ uses
   determinados para que o usuário consiga continuar as operações.
 }
 
-procedure TfrmLeitorCodigosBarraCodigoQR.btnSelecionarImagemClick(Sender: TObject);
+procedure TfrmLeitorCodigosBarraCodigoQR.btnSelecionarImagemClick
+  (Sender: TObject);
 var
-  Teste: string; // Declarando variável para manipular o TEdit
+  campoQRCode: string; // Declarando variável para manipular o TEdit
   OpenDialog: TOpenDialog;
 begin
   {
@@ -54,14 +55,15 @@ begin
     do Swith Case, a pessoa será levada ou pro Selecionar Imagem, ou pra Webcam.
   }
 
-  if MessageDlg('Testando: Deseja utiizar a Webcam para Escanear? ', mtInformation, [mbYes, mbNo], 0) = mrNo then
+  if MessageDlg('Testando: Deseja utiizar a Webcam para Escanear? ',
+    mtInformation, [mbYes, mbNo], 0) = mrNo then
   begin
     {
       Manipulando TEdit, atribuindo valor Texto a ele
     }
-    Teste := edtQRCode.text;
-
-    if Teste <> '' then
+    campoQRCode := edtQRCode.text;
+    // Se for diferente de Vazio, mostra uma mensagem
+    if campoQRCode <> '' then
     begin
       ShowMessage('Campo de QRCode já está preenchido.');
     end
@@ -70,7 +72,6 @@ begin
       // Abre o segundo form
       Application.CreateForm(TForm1, Form1);
       Form1.ShowModal;
-
       {
         Estudar mais uma condição, para que se caso o cliente abra a Seleção de
         Imagens, o OpenDialog abra automaticamente
@@ -84,4 +85,3 @@ begin
 end;
 
 end.
-

@@ -1,0 +1,33 @@
+object frmChild: TfrmChild
+  Left = 0
+  Top = 0
+  Caption = 'frmChild'
+  ClientHeight = 242
+  ClientWidth = 527
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Visible = True
+  WindowState = wsMaximized
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlContainer: TPanel
+    Left = 0
+    Top = 0
+    Width = 527
+    Height = 242
+    Align = alClient
+    Caption = 'pnlContainer'
+    TabOrder = 0
+    ExplicitLeft = 88
+    ExplicitTop = 64
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+  end
+end

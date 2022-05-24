@@ -14,6 +14,7 @@ type
     uploadImagem: TImage;
     pnlBotaoEnviarCodigo: TPanel;
     btnEnviarCodigoLido: TButton;
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,10 +27,13 @@ var
 implementation
 
 {$R *.dfm}
-
 {
-Se o Tmemo estiver vazio, abrir o OpenDialog para pessoa poder enviar uma foto
+  Se o Tmemo estiver vazio, abrir o OpenDialog para pessoa poder enviar uma foto
 }
 
-end.
+procedure TForm1.FormActivate(Sender: TObject);
+begin
+  OpenDialog.Execute();
+end;
 
+end.

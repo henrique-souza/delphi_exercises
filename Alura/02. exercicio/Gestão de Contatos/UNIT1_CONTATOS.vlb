@@ -1,29 +1,47 @@
 ﻿[FDConnection1]
-Coordinates=0,0,90,33
+Coordinates=0,-10,90,33
 Visible=True
 
 []
-Coordinates=298,1,44,58
+Coordinates=560,50,60,123
 
 [BindSourcecontatos]
-Coordinates=130,0,115,141
+Coordinates=170,0,115,141
 
 [FDTablecontatos]
 Coordinates=44,55,97,33
 Visible=False
 
-[Edit1]
-Coordinates=290,0,40,51
-
-[Edit2]
-Coordinates=350,40,40,51
-
-[Edit3]
-Coordinates=440,80,40,51
-
-[Edit4]
-Coordinates=360,120,40,51
-
 [BindingsList1]
 Coordinates=31,55,82,33
+
+[caixaIdentificacao]
+Coordinates=320,-10,103,51
+
+[caixaDeNome]
+Coordinates=430,20,81,51
+
+[caixaTelefone]
+Coordinates=410,80,82,51
+
+[caixaEmail]
+Coordinates=330,110,67,51
+
+[DBNavigator1]
+Coordinates=311,179,82,51
+
+[DataSource1]
+Coordinates=232,179,77,33
+
+[Identificacao]
+Coordinates=79,52,77,51
+
+[Nome]
+Coordinates=30,52,42,51
+
+[Telefone]
+Coordinates=30,110,56,51
+
+[Email]
+Coordinates=80,110,41,51
 
