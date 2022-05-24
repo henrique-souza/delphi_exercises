@@ -48,6 +48,8 @@
 *.ocx
 *.accdb
 *.mdb
+*.pdf
+*.jpg
 
 # ignorando os executaveis das multi-plataformas, PC e Mobile
 *.fmx
