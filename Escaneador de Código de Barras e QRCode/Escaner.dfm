@@ -1,7 +1,7 @@
-object Form1: TForm1
+object EscaneadorCodigoBarrasQRCode: TEscaneadorCodigoBarrasQRCode
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = 'Escaneador de C'#243'digo de Barras e QR Code'
   ClientHeight = 242
   ClientWidth = 527
   Color = clBtnFace
@@ -23,9 +23,6 @@ object Form1: TForm1
     Lines.Strings = (
       'mmo1')
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 40
-    ExplicitHeight = 89
   end
   object btnLerCodigoBarras: TButton
     Left = 191
@@ -45,9 +42,6 @@ object Form1: TForm1
     Lines.Strings = (
       'mmoLeitorQRCode')
     TabOrder = 2
-    ExplicitLeft = 392
-    ExplicitTop = 56
-    ExplicitHeight = 89
   end
   object btnLerQRCode: TButton
     Left = 191

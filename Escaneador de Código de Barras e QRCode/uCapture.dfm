@@ -11,9 +11,9 @@ object frmCapture: TfrmCapture
   BorderStyle = bsNone
   ClientHeight = 1920
   ClientWidth = 1080
-  Color = clDefault
+  Color = clWindowText
   TransparentColor = True
-  TransparentColorValue = clHighlightText
+  TransparentColorValue = clWindow
   DefaultMonitor = dmDesktop
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -33,44 +33,4 @@ object frmCapture: TfrmCapture
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
-  object lbX: TLabel
-    Left = 0
-    Top = 0
-    Width = 1080
-    Height = 25
-    Align = alTop
-    Alignment = taCenter
-    Caption = 'lbX'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -21
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-    OnMouseDown = FormMouseDown
-    OnMouseMove = FormMouseMove
-    OnMouseUp = FormMouseUp
-    ExplicitWidth = 29
-  end
-  object lbY: TLabel
-    Left = 0
-    Top = 25
-    Width = 153
-    Height = 1895
-    Align = alLeft
-    AutoSize = False
-    BiDiMode = bdLeftToRight
-    Caption = 'lbY'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -21
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentBiDiMode = False
-    ParentFont = False
-    Layout = tlCenter
-    OnMouseDown = FormMouseDown
-    OnMouseMove = FormMouseMove
-    OnMouseUp = FormMouseUp
-  end
 end

@@ -12,8 +12,6 @@ type
     aHohe: Integer): TBitmap;
 
   TfrmCapture = class(TForm)
-    lbX: TLabel;
-    lbY: TLabel;
     procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
@@ -94,26 +92,36 @@ begin
 
     FCaptureArea.Height := Y - FY;
     FCaptureArea.Repaint;
-
-    FCaptureArea.Caption := IntToStr(FCaptureArea.Width) + ' X ' +
-      IntToStr(FCaptureArea.Height);
-    FCaptureArea.Repaint;
   end;
-
-  lbX.Caption := IntToStr(X);
-  lbX.Repaint;
-  lbY.Caption := IntToStr(Y);
-  lbY.Repaint;
-
 end;
 
 procedure TfrmCapture.FormMouseUp(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
 begin
-// Adicionar tratamento para o EOutOfResources aqui, assim que poss√≠vel
-  Self.Visible := False;
-  FPrint := WindowCapture(FX, FY, X, Y);
-  Close;
+  try
+    try
+      Self.Visible := False;
+      FPrint := WindowCapture(FX, FY, X, Y);
+      Close;
+    except
+      on EOutOfResources do
+        if MessageDlg('¡rea inv·lida.'#13#10'Tente novamente.', mtError,
+          mbOKCancel, 0) = mrOk then
+        begin
+          Exit;
+        end;
+
+      on EAccessViolation do
+        if MessageDlg('¡rea inv·lida.'#13#10'Tente novamente.', mtError,
+          mbOKCancel, 0) = mrOk then
+        begin
+          Exit;
+        end;
+    end;
+  finally
+    Close;
+    Self.Visible := True;
+  end;
 end;
 
 procedure TfrmCapture.FormShow(Sender: TObject);

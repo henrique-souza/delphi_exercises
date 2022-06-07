@@ -9,7 +9,7 @@ uses
   ZXing.ReadResult, ZXing.BarCodeFormat, ZXing.ScanManager;
 
 type
-  TForm1 = class(TForm)
+  TEscaneadorCodigoBarrasQRCode = class(TForm)
     memoCodigoLido: TMemo;
     btnLerCodigoBarras: TButton;
     mmoLeitorQRCode: TMemo;
@@ -24,7 +24,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  EscaneadorCodigoBarrasQRCode: TEscaneadorCodigoBarrasQRCode;
 
 implementation
 
@@ -33,7 +33,8 @@ uses
 
 {$R *.dfm}
 
-procedure TForm1.btnLerCodigoBarrasClick(Sender: TObject);
+procedure TEscaneadorCodigoBarrasQRCode.btnLerCodigoBarrasClick
+  (Sender: TObject);
 begin
   btnLerQRCode.Enabled := False;
   Decodificar(TBarcodeFormat.Auto);
@@ -41,7 +42,7 @@ begin
   mmoLeitorQRCode.Clear;
 end;
 
-procedure TForm1.btnLerQRCodeClick(Sender: TObject);
+procedure TEscaneadorCodigoBarrasQRCode.btnLerQRCodeClick(Sender: TObject);
 begin
   btnLerCodigoBarras.Enabled := False;
   Decodificar(TBarcodeFormat.QR_CODE);
@@ -51,17 +52,17 @@ end;
 
 {$REGION 'Código que Decodifica o que foi Capturado pelo Usuário'}
 
-function TForm1.Decodificar(const FormatoCodigo: TBarcodeFormat): TReadResult;
+function TEscaneadorCodigoBarrasQRCode.Decodificar(const FormatoCodigo
+  : TBarcodeFormat): TReadResult;
 var
   FerramentaDeCaptura: TfrmCapture;
   LeitorDoResultado: TReadResult;
   Escaneador: TScanManager;
   ImagemCapturada: Vcl.Graphics.TBitmap;
 begin
-
+  ImagemCapturada := nil;
   LeitorDoResultado := nil;
   Escaneador := nil;
-  ImagemCapturada := nil;
 
   // Tira o TForm1 atual da frente da tela
   Self.Visible := False;

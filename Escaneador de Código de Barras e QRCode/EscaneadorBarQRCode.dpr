@@ -2,7 +2,7 @@ program EscaneadorBarQRCode;
 
 uses
   Vcl.Forms,
-  Escaner in 'Escaner.pas' {Form1},
+  Escaner in 'Escaner.pas' {EscaneadorCodigoBarrasQRCode},
   uCapture in 'uCapture.pas' {frmCapture};
 
 {$R *.res}
@@ -10,6 +10,6 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TEscaneadorCodigoBarrasQRCode, EscaneadorCodigoBarrasQRCode);
   Application.Run;
 end.
