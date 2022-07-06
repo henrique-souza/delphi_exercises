@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{75E33236-6E6F-47FD-98FE-BE4950509A75}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ProjectTDD.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\ProjectTDDTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ProjectTDD">
+        <MSBuild Projects="ProjectTDD.dproj"/>
+    </Target>
+    <Target Name="ProjectTDD:Clean">
+        <MSBuild Projects="ProjectTDD.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProjectTDD:Make">
+        <MSBuild Projects="ProjectTDD.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ProjectTDDTests">
+        <MSBuild Projects="Test\ProjectTDDTests.dproj"/>
+    </Target>
+    <Target Name="ProjectTDDTests:Clean">
+        <MSBuild Projects="Test\ProjectTDDTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProjectTDDTests:Make">
+        <MSBuild Projects="Test\ProjectTDDTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ProjectTDD;ProjectTDDTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ProjectTDD:Clean;ProjectTDDTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ProjectTDD:Make;ProjectTDDTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E1729C6D-7E77-4EA9-9DE5-02330D56B589}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="EscaneadorBarQRCode.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="EscaneadorBarQRCode">
+        <MSBuild Projects="EscaneadorBarQRCode.dproj"/>
+    </Target>
+    <Target Name="EscaneadorBarQRCode:Clean">
+        <MSBuild Projects="EscaneadorBarQRCode.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EscaneadorBarQRCode:Make">
+        <MSBuild Projects="EscaneadorBarQRCode.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="EscaneadorBarQRCode"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="EscaneadorBarQRCode:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="EscaneadorBarQRCode:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
